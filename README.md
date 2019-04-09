@@ -1,5 +1,8 @@
 # movie
-
+### 说明
+```
+调用电影天堂Api,用VUE开发的一个小项目，由于其它项目开始了，这个暂停了
+```
 ## Project setup
 ```
 npm install
