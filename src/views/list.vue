@@ -15,19 +15,7 @@
         <img src="../assets/image/down.png" class="icon" @click="down(item.categoryId,item.id)">
       </div>
     </div>
-    <show-model v-bind:showModel="show" v-on:hiddenModel="show = false">
-      <div class="down-list">
-        <div v-for="address in downList" class="down-item" v-if="address">
-          <div class="item-address">{{address}}</div>
-          <div class="item-foo">
-            <div class="item-btn">复制</div>
-            <div class="item-btn">
-              <span class="iconfont icon-xunlei"></span>下载
-            </div>
-          </div>
-        </div>
-      </div>
-    </show-model>
+    <show-model v-bind:showModel="show" v-on:hiddenModel="show = false" v-bind:downList="downList" ></show-model>
   </div>
 </template>
 
