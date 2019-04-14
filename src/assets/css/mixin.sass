@@ -1,0 +1,99 @@
+@import './var.sass'
+
+@mixin no-wrap() // 不换行
+  text-overflow: ellipsis
+  overflow: hidden
+  white-space: nowrap
+
+@mixin flex
+  display: flex
+  justify-content: center
+
+@mixin bg-img($num)  // 背景图片
+  background-image: url('../image/#{$num}.jpg')
+  background-size: 1vw*100
+  background-repeat: no-repeat
+  background-clip:content-box
+
+@mixin border-line ($px, $direction:all) 
+  @if $direction == 'all'
+    border: $px solid $border-color
+  @else
+    border-#{$direction}: $px solid $border-color
+
+@mixin mask($color:#e2e2e2c7,$zIndex: 20)
+  // padding: 0
+  z-index: $zIndex
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  bottom: 0
+  background: $color
+
+@mixin position($name)  
+  position: absolute
+  left: 50%
+  translate: -50% 0 
+  @if($name == 'vertical')
+    top: 50%
+    transform: translateY(-50%)
+
+@mixin fa
+  display: inline-block
+  font: normal normal normal 14px/1 FontAwesome
+  font-size: inherit
+  text-rendering: auto
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+@mixin animation ($name)
+  -webkit-animation: $name 1s ease 
+
+@mixin title 
+  font-size: $title-size
+  color: $title-color
+@mixin desc
+  font-size: $desc-size
+  color: $desc-color 
+
+
+
+  
+@mixin line-before-after
+  display: block
+  position: relative
+  &:after
+    background: #FE2C60
+    content: ""
+    height: 1px
+    position: absolute
+    top: 44%
+    width: 15px
+    right: 34%
+  &:before
+    background: #FE2C60
+    content: ""
+    height: 1px
+    position: absolute
+    top: 44%
+    width: 15px
+    left: 34%
+
+@mixin edit
+  background:  #FFF no-repeat center
+  background-size: cover
+  width: 20px;
+  height: 20px;
+
+@mixin btn
+  width: 303px
+  height: 40px
+  line-height: 40px
+  text-align: center
+  background: #FE2C60
+  color: #fff
+  margin: 30px auto 0 auto
+  border-radius: 2.5px
+
+
+ 

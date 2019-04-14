@@ -1,5 +1,5 @@
 <template>
-  <div class="tip" v-show="show">
+  <div class="tip" v-show="show" @click="hiddenModel">
     <div class="tip-content">{{content}}</div>
   </div>
 </template>

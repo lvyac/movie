@@ -9,7 +9,7 @@
           <div class="item-name">{{ item.name }}</div>
           <div class="item-date">
             <span>更新日期</span>
-            {{ item.publishTime }}
+            <div>{{ item.publishTime }}</div>
           </div>
         </a>
         <img src="../assets/image/down.png" class="icon" @click="down(item.categoryId,item.id)">
@@ -123,12 +123,14 @@ export default {
         margin-top: 5px;
         font-size: 16px;
         color: #6e6e6e;
+        display: flex;
+        align-items: center;
         span {
           color: #75bba8;
           border: 1px solid #75bba8;
-          font-size: 8px;
-          padding: 0 5px;
-          margin-right: 10px;
+          font-size: 10px;
+          padding: 2px 10px;
+          margin-right: 8px;
           border-radius: 2px;
         }
       }

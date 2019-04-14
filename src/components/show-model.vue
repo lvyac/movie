@@ -8,7 +8,7 @@
           <div class="item-address">{{address}}</div>
           <div class="item-foo">
             <div class="item-btn btn-default" v-clipboard:copy="address" v-clipboard:success="onCopy" v-clipboard:error="onError">复制</div>
-            <div class="item-btn btn-primary">
+            <div class="item-btn btn-primary" @click="downLoad(address)">
               <span class="iconfont icon-xunlei"></span>下载
             </div>
           </div>
@@ -40,8 +40,10 @@ export default {
     },
     onError(){
       console.log('复制失败')
+    },
+    downLoad(url){
+      location.href="xunlei://"+url
     }
-    
   }
 };
 </script>

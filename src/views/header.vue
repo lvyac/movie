@@ -1,10 +1,10 @@
 <template>
   <div class="header">
     <div class="nav clearFix">
-      <div class="pull-left">
+      <router-link to="/" tag="div" class="pull-left" v-show="$route.params.cid">
         <span class="iconfont icon-fanhui1 nav-icon"></span>
-      </div>
-      <div class="nav-title">电影天堂</div>
+      </router-link>
+      <span class="nav-title">电影天堂</span>
       <div class="pull-right" @click="showCategory = !showCategory">
         <span class="iconfont icon-fenlei nav-icon"></span>
       </div>
@@ -40,6 +40,7 @@ export default {
     watch:{
       '$route'(to,from){
         this.showCategory=false
+        console.log(to)
       }
     },
     created(){
@@ -56,14 +57,16 @@ export default {
   color: #fff;
   .nav {
     display: flex;
-    height: 48px;
     align-items: center;
     justify-content: space-between;
     padding: 0 10px;
     font-size: 18px;
+    height: 48px;
     .nav-title{
       font-size: 20px;
       font-weight: 500;
+      margin:auto;
+      text-align: center;
     }
  
     .nav-icon {
@@ -77,9 +80,11 @@ export default {
 }
 .pull-let{
     float: left;
+    z-index:100;
 }
 .pull-right{
     float:right;
+    z-index:100;
 }
 .header-category{
     background-color: rgba(5, 78, 21, 0.8);

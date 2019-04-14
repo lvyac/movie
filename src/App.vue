@@ -6,9 +6,11 @@
 </template>
 <script>
 import header from "./views/header";
+import scroll from './components/scroll';
 export default {
   components: {
-    "v-header": header
+    "v-header": header,
+    scroll,
   }
 };
 </script>
