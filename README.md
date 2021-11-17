@@ -40,6 +40,11 @@ x-header-request-key: e32b49af35fc703025987fed9591857b // 加密文式 md5(wq0LQ
 x-header-request-imei:  //空
 ```
 
+### x-header-request-key 说明
+```
+用md5加密字符串由三个字段组合:(wq0LQbLUTH66)(x-header-request-timestamp=当前时间戳)(x-header-request-imei=)
+```
+
 ### 详情页
 ```
 GET http://m.dydytt.net:8080/adminapi/api/movieDetail.json?categoryId=9&movieDetailId=23903 HTTP/1.1
